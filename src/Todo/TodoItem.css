@@ -1,0 +1,31 @@
+.yourTask {
+  width: 290px;
+  padding: 0 0 0 30px;
+  color: #5f6969;
+  background: #dcefef;
+  border: 1px solid #cfd7d6;
+  box-sizing: border-box;
+  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px 0 0 25px;
+  position: relative;
+  height: 40px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.yourTask:hover {
+  background: #a9e9e7;
+  transform: scale(1.05);
+}
+
+.yourTask:focus {
+  outline-width: 0;
+  cursor: all-scroll;
+}
+
+.yourTask:active {
+  cursor: all-scroll;
+}
