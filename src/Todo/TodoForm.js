@@ -1,6 +1,7 @@
+import './TodoForm.css'
 import { useState } from "react";
 
-function TodoForm({ addTask }) {
+function TodoForm({ addTask, columnStatus}) {
     const [userInput, setUserInput] = useState('')
 
     const handleChange = (e) => {
@@ -9,7 +10,7 @@ function TodoForm({ addTask }) {
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        addTask(userInput)
+        addTask(userInput, columnStatus)
         setUserInput("")
     }
 
