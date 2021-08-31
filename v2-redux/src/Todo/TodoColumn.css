@@ -1,0 +1,100 @@
+button {
+  width: 58px;
+  height: 34px;
+  left: 493px;
+  top: 206px;
+  border-radius: 5px;
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+
+  cursor: pointer;
+  color: #fdfdfd;
+  background-color: #90d7d5;
+}
+
+.text {
+  position: center;
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 0 0 8px 0;
+  color: #fbd3ab;
+}
+
+.yourTask {
+  width: 290px;
+  padding: 0 0 0 30px;
+  color: #5f6969;
+  background: #dcefef;
+  border: 1px solid #cfd7d6;
+  box-sizing: border-box;
+  border-radius: 5px;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px 0 0 0;
+  position: relative;
+  height: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  cursor: grab;
+}
+
+.yourTask:hover {
+  background: #a9e9e7;
+  transform: scale(1.02);
+}
+
+.yourTask:focus {
+  outline-width: 0;
+  cursor: all-scroll;
+}
+
+.yourTask:active {
+  cursor: all-scroll;
+}
+
+.list {
+  display: flex;
+  vertical-align: top;
+  flex-direction: column;
+  position: static;
+  background: #f6ede7;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 8px;
+  height: 400px;
+}
+
+.top-list {
+  margin: 0 0 6px 0;
+}
+
+.tasks {
+  width: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tasks::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tasks::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.tasks::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #666;
+  border-radius: 3px;
+}

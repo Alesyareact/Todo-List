@@ -1,0 +1,32 @@
+body {
+  background: url("asteroids.jpg");
+  background-attachment: fixed;
+  background-size: initial;
+  font-family: Roboto;
+}
+
+.wrapper {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  min-height: auto;
+}
+
+h1 {
+  align-items: center;
+  color: #badadf;
+}
