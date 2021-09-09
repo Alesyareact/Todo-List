@@ -6,10 +6,27 @@ body {
 }
 
 .wrapper {
-  width: 1000px;
+  width: 1400px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  overflow: auto;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 10px;
+  background-color: none;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #18aaaa;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: none;
 }
 
 .lists {
@@ -29,4 +46,15 @@ body {
 h1 {
   align-items: center;
   color: #badadf;
+}
+
+.addColumn {
+  width: 300px;
+  height: 80px;
+  background-color: #33dddda6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  padding: 4px;
 }

@@ -32,7 +32,7 @@ button {
 
 .yourTask {
   width: 290px;
-  padding: 0 0 0 30px;
+  padding: 0 0 0 10px;
   color: #5f6969;
   background: #dcefef;
   border: 1px solid #cfd7d6;
@@ -73,6 +73,7 @@ button {
   margin: 4px;
   padding: 8px;
   height: 400px;
+  width: 300px;
 }
 
 .top-list {

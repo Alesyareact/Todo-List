@@ -1,12 +1,12 @@
 const tasks = {
-  state: [{ id: 1, text: "agbfffhd", columnStatus: "doing" }],
+  state: [{ id: "1", text: "agbfffhd", columnId: 1 }],
   reducers: {
-    addTask(state, payload, columnStatus) {
+    addTask(state, payload, columnId) {
       const text = payload;
       // const columnStatus = "doing";
       const newState = [
         ...state,
-        { id: Math.random().toString(36).substr(2, 9), text, columnStatus },
+        { id: Math.random().toString(36).substr(2, 9), text, columnId },
       ];
 
       return newState;
@@ -17,7 +17,7 @@ const tasks = {
     },
     changeStatus(tasks, text, targetStatus) {
       const result = tasks.findIndex((task) => task.text === text);
-      tasks[result].columnStatus = targetStatus;
+      tasks[result].columnId = targetStatus;
       const newStateStatus = [...tasks];
       return newStateStatus;
     },

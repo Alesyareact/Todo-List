@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./TodoForm.css";
 import { useDispatch } from "react-redux";
+import PropTypes from "prop-types";
 
-function TodoForm({ columnStatus }) {
+function TodoForm({ columnId }) {
   const {
     tasks: { addTask },
   } = useDispatch();
@@ -18,12 +19,12 @@ function TodoForm({ columnStatus }) {
         onChange={(e) => {
           setUserInput(e.target.value);
         }}
-        // onKeyDown={handleKeyPress}
       />
       <button
         onClick={(e) => {
           e.preventDefault();
-          addTask(userInput, columnStatus);
+          addTask(userInput, columnId);
+          setUserInput("");
         }}
       >
         Add
@@ -31,5 +32,9 @@ function TodoForm({ columnStatus }) {
     </form>
   );
 }
+
+TodoForm.propTypes = {
+  columnId: PropTypes.string.isRequired,
+};
 
 export default TodoForm;
