@@ -99,3 +99,13 @@ button {
   background-color: #666;
   border-radius: 3px;
 }
+
+.edit {
+  size: 16px;
+}
+
+.yourTask input {
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+}

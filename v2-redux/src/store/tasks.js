@@ -1,5 +1,5 @@
 const tasks = {
-  state: [{ id: "1", text: "agbfffhd", columnId: 1 }],
+  state: [],
   reducers: {
     addTask(state, payload, columnId) {
       const text = payload;
@@ -20,6 +20,17 @@ const tasks = {
       tasks[result].columnId = targetStatus;
       const newStateStatus = [...tasks];
       return newStateStatus;
+    },
+    setUpdate(tasks, id, text) {
+      console.log(id);
+      console.log(text);
+      const update = tasks.map((task) => {
+        if (task.id === id) {
+          task.text = text;
+        }
+        return task;
+      });
+      return [...update];
     },
   },
 };

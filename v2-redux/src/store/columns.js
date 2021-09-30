@@ -6,7 +6,6 @@ const columns = {
   ],
   reducers: {
     addColumn(state, columnName) {
-      // state.push(columnName);
       console.log(columnName);
       const newStateColumn = [
         ...state,
@@ -18,8 +17,24 @@ const columns = {
       const newRemoveStateColumn = [
         ...state.filter((column) => column.columnId !== columnId),
       ];
+      localStorage.setItem("columnList", JSON.stringify(newRemoveStateColumn));
       return newRemoveStateColumn;
     },
+    // renameColumn(state, newName, columnId) {
+    //   // найти индекс щбъекта в массиве
+    //   // поменять нужное поле
+    //   // вернуть новый массив
+    //   console.log(state);
+
+    //   const indexColumn = state.findIndex(
+    //     (column) => column.columnId === columnId
+    //   );
+    //   state[indexColumn].columnName = newName;
+    //   console.log("renameColumnState");
+    //   console.log(state);
+
+    //   return [...state];
+    // },
   },
 };
 

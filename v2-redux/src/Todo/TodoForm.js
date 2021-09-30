@@ -9,10 +9,26 @@ function TodoForm({ columnId }) {
   } = useDispatch();
 
   const [userInput, setUserInput] = useState("");
+  const [userInputValue, setUserInputValue] = useState("", false);
+  const [userInputError, setuserInputError] = useState(
+    "Поле не может быть пустым"
+  );
+
+  const blurHandler = (e) => {
+    switch (userInput) {
+      case "input":
+        setUserInputValue(true);
+        break;
+      default:
+        break;
+    }
+  };
 
   return (
     <form>
+      {userInputValue && userInputError && <div>{userInputError}</div>}
       <input
+        onBlur={(e) => blurHandler(e)}
         type="text"
         size="40"
         value={userInput}
@@ -23,7 +39,14 @@ function TodoForm({ columnId }) {
       <button
         onClick={(e) => {
           e.preventDefault();
-          addTask(userInput, columnId);
+
+          if (!userInput) {
+            setuserInputError("Поле не может быть пустым");
+          }
+          if (userInput) {
+            addTask(userInput, columnId);
+          }
+
           setUserInput("");
         }}
       >

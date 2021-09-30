@@ -34,7 +34,9 @@ function App() {
             <button
               onClick={(e) => {
                 e.preventDefault();
+                console.log(e);
                 addColumn(columnInput);
+                setColumnInput("");
               }}
             >
               add column
